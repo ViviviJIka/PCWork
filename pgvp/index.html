@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PC-WORK</title>
+
+        <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+                
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/logo.png" type="image/icon type">
+    </head>
+
+    <body>
+        <div class="body__inner">
+        <!-- Хэдер страницы -->
+        <header class="header">
+            <div class="header__inner container">
+                <div class="header__logo">
+                    <img src="img/logo.png" alt="PC-WORK" width="80px" height="">
+                    <h1 class="header__logo-text">PC-WORK</h1>
+                </div>
+              
+                <!-- Кнопка "Корзина" -->
+                <div class="header__cart">
+                    <span class="header__cart-price"></span>
+                    <a href="" class="button__cart">
+                        <img src="img/open-cart.png" alt="Корзина" width="130px" height="45px">
+                    </a>
+                    
+                    <!-- Корзина -->
+                    <div class="show-menu visible-none">
+
+                        <div class="cart-menu-title">
+                            <h2 class="cart-title">Товары</h2>
+                            <a href="" class="cart-clear-button">Очистить</a>
+                        </div>
+        
+                        <div class="cart-menu">
+                            <div class="cart-list">
+
+                                <!-- Список элементов в корзине -->
+                                <ul class="cart-menu-list">
+                                    <li class="cart-menu-item">
+                                        <div class="cart-item-product">
+                                            <img src="img/services/1.png" alt="" width="60px" height="60px">
+                                            <div class="cart-item-desc">
+                                                <h3 class="cart-item-name">-</h3>
+                                                <h3 class="cart-item-price">-</h3>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cart-item-controls">
+                                            <a href="" class="decrease-cart-item cart-item-button">-</a>
+                                            <span class="cart-item-count">1</span>
+                                            <a href="" class="increase-cart-item cart-item-button">+</a>
+                                        </div>
+                                    </li>
+                                </ul>
+        
+                                <h3 class="cart-price">Общая цена: 0 руб.</h3>
+                            </div>
+                            <div class="cart-payment">
+                                <form class="cart-form">
+                                    <h4 class="cart-form-name">Имя и фамилия</h4>
+                                    <input type="firstname" minlength="4" class="cart-form-input" placeholder="Например: Александр Иванов" required>
+                                    <h4 class="cart-form-name">Адрес</h4>
+                                    <input type="text" minlength="10" class="cart-form-input" placeholder="Например: г. Санкт-Петерсбург, ул. Невского" required>
+                                    <h4 class="cart-form-name">Номер телефона</h4>
+                                    <input type="tel" id="phone" pattern="[+]?[0-9]{11}" class="cart-form-input" placeholder="" title="Введите номер в формате +7xxxxxxxxxx" required>
+                                </form>
+                                <button type="submit" class="cart-pay-button">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+                        <!-- Шаблон для добавления услуги -->
+                         <template id="service-item">
+                            <div class="services__item">
+                              <div class="services__item-top">
+                                <img src="" alt="" width="340px" class="services__item-image">    
+                                <h2 class="services__item-name"></h2>
+                              </div>
+                                <div class="services__item-inner"></div>
+                                    <ul class="services__item-desc">
+                                        
+                                    </ul>
+                                    <div class="services__item-payment">
+                                        <div class="services__item-payment-left">
+                                            <h3 class="services__item-price"></h3>
+                                        </div>
+
+                                        <button type="button" class="services__item-cart">
+                                            <img src="img/cart.png" alt="Добавить в корзину" width="120px" height="40px">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                         </template>
+
+                        <!-- Шаблон для добавления товара в корзину -->
+                        <template id="product">
+                            <li class="cart-menu-item">
+                                <div class="cart-item-img">
+                                    <img alt="" width="80px" height="60px">
+                                </div>
+
+                                <div class="cart-item-desc">
+                                    <h3 class="cart-item-name">-</h3>
+                                    <h3 class="cart-item-price">-</h3>
+                                </div>
+
+                                <div class="cart-item-controls">
+                                    <a href="" class="decrease-cart-item cart-item-button">-</a>
+                                    <span class="cart-item-count">1</span>
+                                    <a href="" class="increase-cart-item cart-item-button">+</a>
+                                </div>
+                            </li>
+                        </template>
+                        
+        </header>
+        
+        <!-- Основной контент страницы -->
+        <main class="main ">
+
+            <!-- Баннер -->
+            <section class="banner">
+                <div class="banner__inner container">
+                </div>
+            </section>
+
+            <!-- Список услуг -->
+            <section class="services">
+                <div class="services__inner container">
+                    <img src="img/products-list.png" alt="" class="services__list-img">
+                    <div class="services__list">
+
+                    </div>
+
+                    <div class="additional__services">
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер страницы -->
+        <footer class="footer">
+            <div class="footer__inner container">
+
+                <div class="footer__top">
+
+                    <div class="footer__top-left">
+                        <p>PC-WORK - Мы работаем по всей стране<br>Наши специалисты найдутся в вашем городе</p>
+                    </div>
+
+                    <div class="footer__top-mid">
+                        <p class="IP">Индивидуальный предприниматель</p>
+                        <div class="IP_text">
+                            Топлес Марина Владимировна <br>
+                            ИНН: 910316141834 <br>
+                            ОГРНИП: 325911200071168
+                        </div>
+                    </div>
+
+                    <div class="footer__top-right">
+                        <h3>Связаться с нами:</h3>
+                        <p>+79886690537 <br>saaamuraaaiii@gmail.com <br></p>
+                    </div>
+
+                </div>
+                
+                <div class="footer__bottom">
+
+                    <div class="footer__bottom-left">
+                        © PC-WORK 2025. Все права защищены. <br>
+                        <a href="docs/user-agreement.pdf" download="user-agreement.pdf" class="user-agreement">
+                            Пользовательское соглашение
+                        </a>
+                    </div>
+
+                    <!-- <div class="footer__bottom-right">
+                        <div class="tips__form">
+                            <h3 class="tips__form-text">Оставить чаевые</h3>
+                            <input type="text" id="name" class="tips__input tips__input-name" placeholder="Имя" required>
+                            <input type="tel" id="phone" pattern="[+]?[0-9]{11}" class="tips__input tips__input-phone" placeholder="Номер телефона" required>
+                            <input type="number" min="100" step="50" class="tips__input tips__input-price" placeholder="Сумма" required>
+                            <button class="tips__button-pay" type="submit">Оплатить</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </footer>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
