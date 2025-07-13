@@ -474,6 +474,11 @@ body {
     justify-content: space-between;
 }
 
+.footer__bottom-left{
+   display: flex;
+   flex-direction: column;
+}
+
 .footer__bottom-right {
     width: 206px;
     justify-self: flex-end;
